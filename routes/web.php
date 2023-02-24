@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('test')->name('test');
+});
+
+Route::get('/news/{id}', function ($id){
+    return "bai viet so $id";
+}) ->name('new');
+
+Route::get('/service', function ($id){
+   return "service $id";
 });
